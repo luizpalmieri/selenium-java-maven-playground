@@ -1,5 +1,6 @@
 package org.example.pom;
 
+import org.example.pom.common.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +22,7 @@ public class LoginPage extends BasePage {
     }
 
     public void login(String username, String password) {
+        navigateTo("https://www.saucedemo.com/");
         type(usernameField, username);
         type(passwordField, password);
         click(loginButton);
